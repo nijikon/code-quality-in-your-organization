@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Code Quality in your organization</title>
+
+    <meta name="description" content="Code Quality in your organization - polishgeeks-dev-tools">
+    <meta name="author" content="Tomasz Pajor">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h2>Code Quality in your organization</h2>
+          <p>
+            <small>
+              Tomasz Pajor<br/>
+              github: <a href="https://github.com/nijikon">@nijikon</a><br/>
+              twitter: <a href="http://twitter.com/tomaszpajor">@tomaszpajor</a><br/>
+              e-mail: <a href="mailto:me@tomaszpajor.com">me@tomaszpajor.com</a>
+            </small>
+          </p>
+        </section>
+
+        <section>
+          <h4>A bit about me</h4>
+
+          <ul>
+          <li>10 years in IT</li>
+          <li>5 years with Ruby and Rails</li>
+          <li>I &lt;3 ruby</li>
+          <li>all in for open-source software</li>
+          <li>quality and automation are very important</li>
+          <li>i don't have a blog</li>
+          <li>i do consulting</li>
+          </ul>
+        </section>
+
+        <section>
+<pre><code data-trim>
+class String;def[]*a;$*&lt;&lt;a;b;end;end;
+_=0;z="C=Fiber;s=$*;a=*0..8;l=C.new{e
+xit},*a.product(a).select{|r,c|s[r][c
+]==0}."[1,9,_, _,_,8, _,_,5]+"map{|r,
+c|C.ne"[_,_,2, _,5,_, _,8,9]+"w{o=s[r
+][c];l"[8,_,6, 7,4,_, _,_,_]+"oop{(1.
+.9).map{|n|C.yield(s[r][c]=n)if a.non
+e?{|k|"[_,_,_, _,_,4, _,9,2]+"s[r][k]
+==n||s"[_,2,3, _,7,_, 8,1,_]+"[k][c]=
+=n||s["[5,6,_, 8,_,_, _,_,_]+"r-r%3+k
+%3][c-c%3+k/3]==n}};s[r][c]=o;C.yield
+}}},C."[_,_,_, _,2,7, 9,_,3]+"new{loo
+p{puts"[9,3,_, _,8,_, 1,_,_]+" s.map{
+|r|r*'"[2,_,_, 5,_,_, _,4,8]+" '}&lt;&lt;''
+;C.yield}};c=l[i=1];loop{c=l[i+=c.res
+ume ? 1:-1]}";eval z.tr ?\n,''
+</code></pre>
+        </section>
+
+        <section>
+	  <p>github.com/tric/trick2015</p>
+        </section>
+
+        <section>
+          <img src="img/amicus.png" style="border: 0; box-shadow: none;" />
+        </section>
+
+        <section>
+          <h4>Please notify me if...</h4>
+
+          <ul>
+          <li>I speak 2 fast</li>
+          <li>I should repeat something</li>
+          <li>I should explain something better</li>
+          <li>You have any questions</li>
+          <li>Thanks Maciej Mensfeld for one more page in my slides ;)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Let's do this</h4>
+          <img src="img/lets-do-this.gif" style="border: 0; box-shadow: none;" />
+        </section>
+
+        <section>
+          <h4>Actually before we even start</h4>
+        </section>
+
+        <section>
+          <h4>Code quality is subjective, it requires human judgment</h4>
+        </section>
+
+        <section>
+          <h4>I think that we've all been there</h4>
+        </section>
+
+        <section>
+          <img src="img/code-quality-wtfs-per-minute.jpg" style="border: 0; box-shadow: none;" />
+        </section>
+
+        <section>
+          <h4>Back to basics</h4>
+        </section>
+
+        <section>
+          <h4>Having cohesive coding style is very important</h4>
+
+          <ul>
+            <li>easier collaboration</li>
+            <li>reduces cost</li>
+            <li>everyone is happy :)</li>
+          </ul>
+        </section>
+
+        <section>
+          <img src="img/quality-means-henry-ford.png" style="border: 0; box-shadow: none;" />
+        </section>
+
+        <section>
+          <h4>Clean code is easier to</h4>
+
+          <ul>
+            <li>understand</li>
+            <li>maintain</li>
+            <li>extend</li>
+            <li>plug in to other projects</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Reduced clarity</h4>
+          <img src="img/reduced-clarity-girl.jpg" style="border: 0; box-shadow: none;"/>
+        </section>
+
+        <section>
+          <h4>Have you ever tried to find out how something works in ActiveRecord?</h4>
+        </section>
+
+        <section>
+          <img src="img/reduced-clarity-joy.jpg" style="border: 0; box-shadow: none; max-width: 45%;"/>
+        </section>
+
+        <section>
+          <img src="img/reduced-clarity-sad.jpg" style="border: 0; box-shadow: none;"/>
+        </section>
+
+        <section>
+          <img src="img/reduced-clarity-facepalm.jpg" style="border: 0; box-shadow: none;"/>
+        </section>
+
+        <section>
+          <img src="img/reduced-clarity-abort.gif" style="border: 0; box-shadow: none;"/>
+        </section>
+
+        <section>
+          <h4>What if you actually need to fix something in ActiveRecord?</h4>
+        </section>
+
+        <section>
+          <img src="img/reduced-clarity-jungle.png" style="border: 0; box-shadow: none;"/>
+        </section>
+
+        <section>
+          <img src="img/reduced-clarity-facepalm2.jpg" style="border: 0; box-shadow: none;"/>
+        </section>
+
+        <section>
+          <h4>Let's get serious for a second</h4>
+        </section>
+
+        <section>
+          <h4>Reduced clarity</h4>
+          <img src="img/reduced-clarity-girl.jpg" style="border: 0; box-shadow: none;" />
+        </section>
+
+        <section>
+          <h4>Long methods</h4>
+        </section>
+
+        <section>
+          <img src="img/reduced-clarity-long-method.png" style="border: 0; box-shadow: none;" />
+        </section>
+
+        <section>
+          <h4>Lots of methods in a single file</h4>
+        </section>
+
+        <section>
+<pre><code data-trim>
+125 ./connection_adapters/abstract_mysql_adapter.rb
+123 ./reflection.rb
+117 ./migration.rb
+86 ./relation/query_methods.rb
+73 ./connection_adapters/postgresql_adapter.rb
+72 ./connection_adapters/abstract_adapter.rb
+68 ./connection_adapters/abstract/connection_pool.rb
+66 ./connection_adapters/sqlite3_adapter.rb
+63 ./connection_adapters/abstract/schema_statements.rb
+62 ./fixtures.rb
+58 ./connection_adapters/abstract/schema_definitions.rb
+56 ./associations/collection_association.rb
+52 ./connection_adapters/postgresql/schema_statements.rb
+51 ./relation.rb
+42 ./associations/collection_proxy.rb
+41 ./core.rb
+40 ./attribute_methods.rb
+37 ./persistence.rb
+37 ./associations.rb
+36 ./relation/finder_methods.rb
+35 ./transactions.rb
+34 ./connection_adapters/mysql_adapter.rb
+22 ./autosave_association.rb
+15 ./nested_attributes.rb
+</code></pre>
+        </section>
+
+        <section>
+          <h4>Duplication</h4>
+        </section>
+
+        <section>
+          <img src="img/reduced-clarity-duplication.png" style="border: 0; box-shadow: none;" />
+        </section>
+
+        <section>
+          <h4>Single responsibility principle</h4>
+
+          <p>Whole article is available at John Bohn blog</p>
+          <p><a href="http://jjbohn.info/blog/2014/07/28/single-responsibility-principle-a-solid-week/">http://jjbohn.info/blog/2014/07/28/single-responsibility-principle-a-solid-week/</a></p>
+        </section>
+
+        <section>
+<pre><code data-trim>
+class Reporter
+  def send_report
+    users = User.where("last_logged_in_at >= ?", 1.week.ago)
+
+    users.each do |user|
+      message = "Id: #{user.id}\n"
+      message += "Username: #{user.username}\n"
+      message += "Last Login: #{user.last_logged_in_at.strftime("%D")}\n"
+      message += "\n"
+    end
+
+    Mail.deliver do
+      from "jjbohn@gmail.com"
+      to "jill@example.com"
+      subject "Your report"
+      body message
+    end
+  end
+end
+</code></pre>
+        </section>
+
+        <section>
+<pre><code data-trim>
+class Reporter
+  def send_report
+    message = generate_message(users)
+
+    deliver_report(message)
+  end
+
+  private
+
+  def users
+  end
+
+  def generate_message(users)
+    message = ""
+    users.each do |user|
+      message += "Id: #{user.id}\n"
+      message += "Username: #{user.username}\n"
+      message += "Last Login: #{user.last_logged_in_at.strftime("%D")}\n"
+      message += "\n"
+    end
+
+    message
+  end
+
+  def deliver_report(message)
+    Mail.deliver do
+      from "jjbohn@gmail.com"
+      to "jill@example.com"
+      subject "Your report"
+      body message
+    end
+  end
+end
+</code></pre>
+        </section>
+
+        <section>
+<pre><code data-trim>
+class ReportDataCsvCompiler
+  attr_accessor :data
+  def initialize(data)
+    self.data = Array(data)
+  end
+
+  def format
+    heading << body
+  end
+
+  private
+
+  def heading
+    data.first.keys.join(",") << "\n"
+  end
+
+  def body
+    data.each_with_object("") do |str, row|
+      str << row.values.join(",") << "\n"
+    end
+  end
+end
+
+class User
+  scope :logged_in_this_week, ->{ where("last_logged_in_at >= ?", 1.week.ago) }
+end
+
+class UserWeeklyReport
+  def self.name
+    "Weekly User Report"
+  end
+
+  def self.formatter
+    ReportDataCsvCompiler
+  end
+
+  def self.data
+    UserWeeklyReportData
+  end
+
+  def to_file
+    File.write("/tmp/my_report")
+  end
+end
+
+class ReportMailer
+  attr_accessor :report, :recipient
+
+  def intiialize(report:, recipient:)
+    self.report = report
+    self.recipient = recipient
+  end
+
+  def deliver!
+    mail = Mail.new do
+      from "jjbohn@gmail.com"
+      to recipient
+      subject report.name
+    end
+
+    mail.add_file(report.to_file)
+    mail.deliver!
+  end
+end
+
+class UserWeeklyReportData
+  def to_data
+    User.logged_in_this_week.map do |user|
+      {
+        id: user.id,
+        username: user.username,
+        last_logged_in_at: user.last_logged_in_at.strftime("%D"),
+      }
+    end
+  end
+end
+
+# Then in you client code
+ReportMailer.new(UserWeeklyReport, "jill@example.com")
+</code></pre>
+        </section>
+
+        <section>
+          <h4>Over-engineering</h4>
+
+          <ul>
+            <li>one of the biggest issues right now</li>
+            <li>don't guess the future, operate on facts in present</li>
+            <li>don't make things that are sufficiently easy more complicated</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Automation</h4>
+          <img src="img/automation.png" style="border: 0; box-shadow: none;"/>
+        </section>
+
+        <section>
+          <h4>There are tools</h4>
+
+          <ul>
+            <li>rubocop</li>
+            <li>flay</li>
+            <li>flog</li>
+            <li>reek</li>
+            <li>list goes on ...</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Why should we use them?</h4>
+        </section>
+
+        <section>
+          <h4>People are expensive, CPU time is cheap ;)</h4>
+        </section>
+
+        <section>
+          <h4>Nobody will argue with a tasks over using " or '</h4>
+        </section>
+
+        <section>
+          <h4>In the long run using this kind of tools makes you a better developer</h4>
+        </section>
+
+        <section>
+          <h4>You will write clean and portable code</h4>
+        </section>
+
+        <section>
+          <h4>It will be easier to migrate or upgrade ruby / rails / gems</h4>
+        </section>
+
+        <section>
+          <h4>It's awesome when you run your code through codeclimate for the first time and see</h4>
+          <img src="img/codeclimate.png" style="border: 0; box-shadow: none;"/>
+        </section>
+
+        <section>
+          <h4>How should I start using those tools?</h4>
+        </section>
+
+        <section>
+          <h4>We have something for you all</h4>
+        </section>
+
+        <section>
+          <h4><a href="https://github.com/polishgeeks/polishgeeks-dev-tools">polishgeeks-dev-tools</a></h4>
+          <p>github.com/polishgeeks/polishgeeks-dev-tools</p>
+        </section>
+
+        <section>
+          <h4><a href="https://github.com/polishgeeks/polishgeeks-dev-tools">polishgeeks-dev-tools</a></h4>
+
+<pre><code data-trim>
+group :development, :test do
+  gem 'polishgeeks-dev-tools'
+end
+</code></pre>
+<pre><code data-trim>
+# config/initializers/polishgeeks_dev_tools.rb
+PolishGeeks::DevTools.setup
+</code></pre>
+        </section>
+
+        <section>
+          <h4>You are ready to go!</h4>
+<pre><code data-trim>
+balrog:brief-api n$ be rake polishgeeks:dev-tools:check
+RequiredFiles                                      OK
+BundlerAudit                                       OK
+Expires in                                         OK
+Brakeman (9 con, 23 mod, 4 temp)                   OK
+Rubocop (311 files, 0 offenses)                    OK
+RubocopRspec (311 files, 0 offenses)               OK
+Final blank line: 370 files checked                OK
+Empty methods: 297 files checked                   OK
+HamlLint                                           OK
+Allowed Extensions                                 OK
+Yaml parser                                        OK
+Rspec files names: 50 files checked                OK
+Tasks files names: 1 files checked                 OK
+Rspec (427 ex, 0 fa, 0 pe)                         OK
+SimpleCov covered 86.03%, required 85.0%           OK
+ExamplesComparator                                 OK
+Rubycritic                                         GENERATED
+</code></pre>
+        </section>
+
+        <section>
+          <h4>If you are not ready for some plugins, you can turn them off</h4>
+<pre><code data-trim>
+PolishGeeks::DevTools.setup do |config|
+  config.yard = false
+  config.rspec_files_structure = false
+  config.simplecov_threshold = 85
+end
+</code></pre>
+        </section>
+
+        <section>
+          <h4>Current status</h4>
+
+          <ul>
+            <li>brakeman, bundler_audit, haml_lint, rubocop, rubocop_rspec, rubycritic, simplecov, yard</li>
+            <li>couple of own extensions</li>
+            <li>ideas on github</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Sadly</h4>
+
+          <p>You need ruby &gt;= 2.1, but you should not use older anyway ;)</p>
+        </section>
+
+        <section>
+          <h2>WANT TO CONTRIBUTE?</h2>
+
+          <p>
+            <a href="https://github.com/polishgeeks/polishgeeks-dev-tools">github.com/polishgeeks/polishgeeks-dev-tools</a>
+          </p>
+
+          <p>
+            <img src="img/github.png" style="background: none; border: none; box-shadow: 0 0 0 0 #fff; margin: 0; padding: 0;"/>
+          </p>
+
+          <ul>
+            <li>The more people star it, the more people use it</li>
+            <li>The more people use it, the more people star it</li>
+            <li>We are waiting for your ideas and suggestions</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>THE END - Q &amp; A</h1>
+
+          <p>
+            <a href="https://github.com/polishgeeks/polishgeeks-dev-tools">github.com/polishgeeks/polishgeeks-dev-tools</a>
+          </p>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
